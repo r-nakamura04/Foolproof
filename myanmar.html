@@ -1,0 +1,263 @@
+# Foolproof
+for tourisut
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 文字コード設定 -->
+    <meta charset="UTF-8" />
+    <!-- いろんなデバイス幅で表示崩れが起きないようにするやつ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- ページタイトル -->
+    <title>ミャンマー</title>
+    <!-- ページ情報 -->
+    <meta name="description" content="ここにページの説明を書く" />
+    <!-- 検索で引っかかるようにする -->
+    <meta name="keywords" content=",で区切ってキーワード" />
+    <!-- css読み込み -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      media="(max-width: 480px)"
+      href="./css/style-sp.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="header-logo" href="index.html">
+        FoolProof
+      </a>
+      <ul class="header-nav-list">
+        <li>
+          <a href="index.html" id="go-top">トップ</a>
+        </li>
+        <li>
+          <a href="foolproof.html" id="go-foolproof">FoolProofとは</a>
+        </li>
+        <li>
+          <a href="help.html" id="go-help">困ったら</a>
+        </li>
+      </ul>
+      <div class="header-sp-icon-wrap">
+        <div class="header-sp-icon-bar1"></div>
+        <div class="header-sp-icon-bar2"></div>
+        <div class="header-sp-icon-bar3"></div>
+      </div>
+      <div class="header-sp-nav">
+        <ul class="header-sp-nav-list">
+          <li>
+            <a href="index.html">トップ<img src="images/right.png" /></a>
+          </li>
+          <li>
+            <a href="sp-foolproof.html"
+              >FoolProofとは<img src="images/right.png"
+            /></a>
+          </li>
+          <li>
+            <a href="sp-help.html">困ったら<img src="images/right.png" /></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="main-visual">
+      <div class="main-visual-left">
+        <div class="main-visual-title">
+          <h1 class="main-visual-title-main">
+            <img src="images/map-point.png" alt="地図のポイント" />
+            Myanmar
+          </h1>
+          <p class="main-visual-title-sub">
+            旅人を惹きつける<br />穏やかで素朴な国
+          </p>
+        </div>
+        <div class="main-visual-image-wrap1">
+          <img src="images/myanmar1.jpg" alt="ミャンマーメインビジュアル画像" />
+        </div>
+      </div>
+      <div class="main-visual-right">
+        <div class="mvr-content">
+          <div class="mvr-item">
+            <div class="mvr-item-photo-people">
+              <img src="images/people .png" alt="people" />
+            </div>
+            <div class="mvr-item-photo">
+              <img
+                src="images/myanmar2.jpg"
+                alt="ミャンマーメインビジュアル画像"
+              />
+            </div>
+          </div>
+          <div class="mvr-item">
+            <div class="mvr-item-photo">
+              <img
+                src="images/myanmar3.jpg"
+                alt="ミャンマーメインビジュアル画像"
+              />
+            </div>
+            <div class="mvr-item-photo-river">
+              <img src="images/river .png" alt="river" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="menu-list">
+      <li>
+        <a href="#recomend-spot">おすすめスポット</a>
+        <img src="images/yazirusi.png" alt="矢印アイコン" />
+      </li>
+      <li>
+        <a href="#must-item">必須アイテム</a>
+        <img src="images/yazirusi.png" alt="矢印アイコン" />
+      </li>
+      <li>
+        <a href="#reccomended-hotel">おすすめホテル</a>
+        <img src="images/yazirusi.png" alt="矢印アイコン" />
+      </li>
+    </ul>
+    <div class="text-spot" id="recomend-spot">
+      おすすめスポット
+    </div>
+    <div class="spot-list">
+      <div class="spot-photo-wrap">
+        <div class="photo-box"></div>
+        <!-- <div class="white-box"></div> -->
+        <div class="spot-title">
+          <h1 class="spot-title-main">
+            新しい時代の流れが進む町<br />ヤンゴン
+          </h1>
+          <h2 class="spot-title-sub">
+            ミャンマーの大都会、ヤンゴン。交通量の多さから<br />
+            バイクの運転はヤンゴン市内では法律で禁止となりました。<br />
+            欧米式のお洒落なカフェや多国籍レストラン、<br />
+            若者の間の韓流ブームなど、海外のさまざまな情報が<br />
+            入って活気に満ちた変わり行くヤンゴンに大注目です。<br />
+            焦らずのんびり時間を費やすミャンマーの人々と<br />
+            同じ時間の流れに乗れば自然に<br />
+            日々の疲れも取れるでしょう。
+          </h2>
+        </div>
+        <div class="spot-photo">
+          <img src="images/myanmar4.jpg" alt="ヤンゴン画像" />
+        </div>
+      </div>
+      <div class="spot-photo-wrap spot-reverse">
+        <div class="photo-box"></div>
+        <div class="spot-photo">
+          <img src="images/myanmar5.jpg" alt="バガン画像" />
+        </div>
+        <!-- <div class="white-box"></div> -->
+        <div class="spot-title">
+          <h1 class="spot-title-main">
+            世界三大仏教遺跡の一つ<br />
+            バガン
+          </h1>
+          <h2 class="spot-title-sub">
+            ミャンマーで一番の仏教聖地であるバガンは2,800もの<br />
+            仏塔が残っています。その数の多さは1日では全てを<br />
+            まわりきることはできませんが、１つ１つの遺跡に<br />
+            さまざまな物語があり、特徴もそれぞれ、詳しい説明を<br />
+            聞きながら時代をタイムスリップするようにその時代の<br />
+            人々の事を考えながら遺跡を巡ると、時間がゆっくりと、<br />
+            そして心地よく過ぎていき、自分の心までおだやかな<br />
+            気分になります。
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="text-item" id="must-item">
+        必須アイテム
+      </div>
+      <div class="spot-photo-wrap spot-item">
+        <div class="item-photo-box"></div>
+        <!-- <div class="white-box"></div> -->
+        <div class="spot-title">
+          <h2 class="item-title-sub">
+            ・地域によっては防寒具<br />
+            ・変換プラグ<br />
+            ・南京錠<br />
+            ・マスク (埃っぽいため)<br />
+            ・雨具(スコールに備えて)<br />
+            ・脱ぎやすいサンダル
+          </h2>
+        </div>
+        <div class="spot-photo">
+          <img src="images/myanmar6.jpg" alt="必須アイテム画像" />
+        </div>
+      </div>
+    </div>
+    <div class="text-spot" id="reccomended-hotel">
+      おすすめホテル
+    </div>
+  
+    <div class="hotel-myanmar">
+      <div class = "hotel-wrap">
+        <div class="hotel-img-wrap">
+          <img src="images/hotel-myanmar1.jpg" alt="ストランド">
+        </div>
+        <div class="hotel-title-wrap">
+          <h1 class="hotel-title-name">ストランド ヤンゴン</h1>
+          <p class="hotel-title-add">92 Strand Rd., ヤンゴン ミャンマー</p>
+        </div>
+        <div class="hotel-ex">
+          ヤンゴンのダウンタウンにあるストランド通り、</br>
+          が近くにあり古いイギリス植民地時代の風景が楽しめる。</br>
+        </div>
+      </div>
+  
+      <div class = "hotel-wrap">
+        <div class="hotel-img-wrap">
+          <img src="images/hotel-myanmar2.jpg" alt="エクセシオール">
+        </div>
+        <div class="hotel-title-wrap">
+          <h1 class="hotel-title-name">ヤンゴンエクセシオール</h1>
+          <p class="hotel-title-add">
+            Building No. 19/43, <br/> Sun Pat Street Pabedan Township, ヤンゴン
+          </p>
+        </div>
+        <div class="hotel-ex">
+          スーレーパゴダ,チャイナタウンなど </br>
+          ヤンゴンの主要観光スポットへのアクセスがよい。</br>
+        </div>
+      </div>
+  
+      <div class = "hotel-wrap">
+        <div class="hotel-img-wrap">
+          <img src="images/hotel-myanmar3.jpg" alt="Aureum Palace Resort">
+        </div>
+        <div class="hotel-title-wrap">
+          <h1 class="hotel-title-name">
+            Aureum Palace Resort </br>
+            & Spa - Ngwe Saung</h1>
+          <p class="hotel-title-add">
+            Ngwe Saung Village, Pathein </br>
+            Division, グエサウン, Ayeyarwaddy,
+          </p>
+        </div>
+        <div class="hotel-ex">
+          海が近く、ングウェサウンビーチが近い。</br>
+          自然豊かで海鮮料理を楽しむことができる。
+        </div>
+      </div>
+  
+      <div class="hotel-myanmar-box-white"></div>
+      <div class="hotel-myanmar-box-pink"></div>
+      
+      
+      
+    </div>
+    <div class="country-icon-wrap">
+      <img src="images/migi.png" alt="右アイコン" />
+      <a href=index.html>国から探し直す</a>
+      
+
+    </div>
+    <div class="footer">
+      <p>
+        FoolProof
+      </p>
+
+    </div>
+  </body>
+</html>
