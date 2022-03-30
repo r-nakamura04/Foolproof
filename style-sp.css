@@ -1,0 +1,404 @@
+# Foolproof
+for tourisut
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  あると便利なもの
+  
+  @font-face {
+    font-family: "名前";
+    src: url("ルーティング(どこのファイルの何 ../font/~~~");
+    font-weight: "太さ 100とか300とか";
+  }
+  
+  :root{
+      --maingreen: #419e9d;
+    }
+    これやると color: var(--maingray);で通るし一遍に色変えれるから地味に便利
+   */
+
+body {
+  font-family: "Arial Rounded MT Bold", "ヒラギノ丸ゴ ProN",
+    "Hiragino Maru Gothic ProN", sans-serif;
+  color: #12223c;
+  background-color: #eee3d0;
+}
+
+a {
+  text-decoration: none;
+  color: #12223c;
+}
+
+/* スマホ　mapページ */
+
+@media screen and (max-width: 480px) {
+  header {
+    width: 100%;
+    height: 60px;
+    z-index: 10;
+    background-color: #eee3d0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    position: fixed;
+  }
+
+  .header-nav-list {
+    display: none;
+  }
+
+  .header-sp-logo {
+    width: 30px;
+  }
+  .map {
+    width: 100%;
+    position: relative;
+    float: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  .map-img-wrap img {
+    width: auto;
+    height: 90vh;
+  }
+
+  .country-list {
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+  }
+
+  .country-list-item {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .country-list-item a {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: solid 2px #12223c;
+    border-top: solid 7px #12223c;
+    padding: 5px 20px;
+  }
+
+  .country-list-item img {
+    width: 10px;
+    height: 15px;
+    margin-right: 10px;
+  }
+
+  .myanmar {
+    top: 22%;
+    left: 30%;
+  }
+
+  .indonesia {
+    top: 73%;
+    left: 150%;
+  }
+
+  .philippine {
+    top: 40%;
+    left: 210%;
+  }
+
+  .singapore {
+    top: 69%;
+    left: 90%;
+  }
+
+  .thailand {
+    top: 35%;
+    left: 70%;
+  }
+
+  .cambodia {
+    top: 42%;
+    left: 90%;
+  }
+
+  .vietnam {
+    top: 21%;
+    left: 95%;
+  }
+
+  .malaysia {
+    top: 63%;
+    left: 70%;
+  }
+
+  .laos {
+    top: 27%;
+    left: 80%;
+  }
+
+  .main-visual-title {
+    top: 60%;
+    left: 6%;
+    font-size: 20px;
+  }
+
+  .main-visual-scroll {
+    display: none;
+  }
+
+  .catch-copy {
+    width: 80%;
+  }
+
+  .catch-copy-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .catch-copy-text {
+    font-size: 12px;
+  }
+
+  .what {
+    padding-top: 80px;
+    padding-bottom: 10px;
+  }
+
+  .what-heading {
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .what-list li {
+    flex-direction: column;
+  }
+
+  .what-list-img-wrap {
+    width: 200px;
+    margin-bottom: 40px;
+  }
+
+  .what-list-caption h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .what-list-caption p {
+    font-size: 12px;
+  }
+
+  .what-list-caption a {
+    font-size: 10px;
+    font-weight: 400;
+    padding: 12px 0;
+  }
+
+  .what-list-caption {
+    width: 80%;
+  }
+
+  .member {
+    padding-top: 80px;
+  }
+
+  .member-heading {
+    margin-bottom: 60px;
+  }
+
+  .member-list {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .member-list li {
+    width: 100px;
+    margin: 0 20px 40px;
+  }
+
+  .footer {
+    height: 80px;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
+
+  .scroll-top img {
+    width: 20%;
+  }
+
+  .scroll-top p {
+    font-size: 10px;
+  }
+
+  .header-sp-icon-wrap {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 100;
+  }
+
+  .header-sp-icon-bar1,
+  .header-sp-icon-bar2,
+  .header-sp-icon-bar3 {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #12223c;
+    border-radius: 1px;
+    transform-origin: left;
+    transition: all 0.3s ease-out;
+  }
+
+  .is-open .header-sp-icon-bar1 {
+    transform: rotate(45deg);
+  }
+
+  .is-open .header-sp-icon-bar2 {
+    transform: scale(0);
+  }
+
+  .is-open .header-sp-icon-bar3 {
+    transform: rotate(-45deg);
+  }
+
+  .header-sp-nav {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: none;
+  }
+
+  .header-sp-nav-list {
+    width: 60%;
+    margin: auto;
+    list-style: none;
+    margin-top: 50%;
+  }
+
+  /* .header-sp-nav-img-wrap {
+      width: 100px;
+      margin: 15vh auto 10vh;
+    }
+  
+    .header-sp-nav-img-wrap img {
+      width: 100%;
+    } */
+
+  .header-sp-nav-list li {
+    margin-bottom: 60px;
+  }
+
+  .header-sp-nav-list a {
+    font-size: 20px;
+    color: #12223c;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header-sp-nav-list img {
+    width: 7%;
+  }
+
+  /*スマホ困ったらページ*/
+  .help {
+    width: 100%;
+    /* height: 100vh; */
+    padding-top: 80px;
+    /* display: flex; */
+  }
+
+  .help-top {
+    width: 100%;
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+
+  .help-img-wrap {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+
+    /* height: 40vw; */
+    /* max-height: 550px; */
+    /* margin-left: 15%; */
+    /* position: absolute; */
+    /* bottom: 50px; */
+    /* width: 600px;
+        height: auto;
+        margin-left: 10%;
+        position: relative;
+        top: 50px; */
+  }
+  .help-img-wrap img {
+    width: 100%;
+    /* height: 280px; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -35px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* margin-right: auto; */
+    /* object-fit: cover;
+    object-position: right; */
+    z-index: 10;
+  }
+
+  .help-title {
+    margin-left: 75px;
+
+    font-size: 20px;
+    z-index: 30;
+  }
+
+  .help-right-box {
+    width: 85%;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 30px;
+    border: solid 3px #c2836c;
+  }
+
+  .ode {
+    font-size: 20px;
+  }
+
+  .ode-country {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 2;
+
+    /* text-align: center; */
+  }
+}
