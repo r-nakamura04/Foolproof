@@ -1,0 +1,848 @@
+# Foolproof
+for tourisut
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  あると便利なもの
+  
+  @font-face {
+    font-family: "名前";
+    src: url("ルーティング(どこのファイルの何 ../font/~~~");
+    font-weight: "太さ 100とか300とか";
+  }
+  
+  :root{
+      --maingreen: #419e9d;
+    }
+    これやると color: var(--maingray);で通るし一遍に色変えれるから地味に便利
+   */
+
+body {
+  font-family: "Arial Rounded MT Bold", "ヒラギノ丸ゴ ProN",
+    "Hiragino Maru Gothic ProN", sans-serif;
+  color: #12223c;
+  background-color: #eee3d0;
+}
+
+a {
+  text-decoration: none;
+  color: #12223c;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6%;
+
+  position: fixed;
+  z-index: 25;
+  background-color: #eee3d0;
+}
+
+.header-nav-list {
+  list-style: none;
+}
+
+.header-nav-list li {
+  display: inline-block;
+  margin: 0 2.5vw;
+}
+
+.header-nav-list a {
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  color: #12223c;
+}
+
+.header-logo {
+  color: #12223c;
+}
+
+.map {
+  width: 100%;
+  padding-top: 80px;
+  position: relative;
+}
+
+.map img {
+  width: 100%;
+  height: auto;
+}
+
+.country-list {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.country-list-item {
+  position: absolute;
+  /* width: 100px;
+    height: 40px;
+    display: inline-block;
+    background-color: white;
+    border: solid 2px #12223c;
+    border-top: solid 7px #12223c; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.country-list-item a {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: solid 2px #12223c;
+  border-top: solid 7px #12223c;
+  padding: 5px 20px;
+}
+
+.country-list-item img {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.myanmar {
+  top: 24%;
+  left: 9%;
+}
+
+.indonesia {
+  top: 73%;
+  left: 47%;
+}
+
+.philippine {
+  top: 40%;
+  left: 65%;
+}
+
+.singapore {
+  top: 72%;
+  left: 26%;
+}
+
+.thailand {
+  top: 37%;
+  left: 19%;
+}
+
+.cambodia {
+  top: 44%;
+  left: 24%;
+}
+
+.vietnam {
+  top: 21%;
+  left: 31%;
+}
+
+.malaysia {
+  top: 63.5%;
+  left: 24.5%;
+}
+
+.laos {
+  top: 29%;
+  left: 24.5%;
+}
+
+.main-visual {
+  width: 100%;
+  padding-top: 50px;
+  overflow: hidden;
+  /* display: flex; */
+  position: relative;
+}
+
+.main-visual-top {
+  /* float: left; */
+  z-index: 2;
+}
+
+.main-visual-title {
+  font-size: 32px;
+  line-height: 1.7;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  z-index: 1;
+}
+
+.main-visual-title-main {
+  width: 150px;
+  height: 35px;
+  font-size: 20px;
+  background-color: #dabfa7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 0px; */
+  margin-bottom: -80px;
+  z-index: 20;
+}
+
+.main-visual-title-main img {
+  width: 12px;
+  margin-right: 15px;
+}
+
+.main-visual-title-sub {
+  font-size: 15px;
+  line-height: 1.2;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.main-visual-image-wrap1 img {
+  width: 100vw;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.main-visual-sub {
+  width: 100%;
+}
+
+.main-visual-under {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* position: absolute; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 296px;
+  box-sizing: content-box;
+  border: 10px solid #eee3d0;
+  background: #c2836c;
+  box-shadow: 0 0 0 10px#c2836c;
+
+  /* width: 80%; */
+  /* background-color: #c2836c; */
+  /* box-shadow: 0 0 0 10px #eee3d0, 0 0 0 20px #c2836c; */
+  /* margin: 350px; */
+  /* padding: 20px 0; */
+}
+
+.mvr-content {
+  width: 60%;
+  margin-right: 5%;
+  float: right;
+}
+
+.mvr-item {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.mvr-item-photo {
+  width: 150px;
+}
+
+.mvr-item-photo img {
+  width: 100%;
+  border: solid 7px #eee3d0;
+}
+
+.mvr-item-photo-people {
+  width: 75px;
+}
+
+.mvr-item-photo-people img {
+  width: 100%;
+}
+
+.mvr-item-photo-river {
+  width: 65px;
+}
+
+.mvr-item-photo-river img {
+  width: 100%;
+}
+
+.menu-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 0 10%;
+  list-style: none;
+  /* margin-left: auto;
+  margin-right: auto;
+  float: left; */
+  margin-top: 25px;
+
+  /* margin-top: 100px; */
+}
+
+.menu-list a {
+  font-size: 10px;
+  color: #12223c;
+}
+
+.menu-list img {
+  width: 15px;
+  padding-left: 5px;
+}
+
+.spot-photo-wrap {
+  position: relative;
+  /* top: 30px;
+    left: 10.91%; */
+  height: 500px;
+  width: 930px;
+  margin: 50px auto 100px;
+  display: flex;
+}
+
+.spot-photo {
+  width: 250px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  /* position: absolute; */
+  /* left: 420px;
+    top: -25px; */
+  /* position: relative; */
+  /* top: -25px; */
+  /* z-index: 1; */
+}
+
+.spot-photo img {
+  width: 100%;
+}
+
+.photo-box {
+  /* margin-left: auto;
+  margin-right: auto;
+  position: relative; */
+  box-sizing: content-box;
+  border: solid 7px #c2836c;
+  background-color: white;
+  width: 275px;
+  height: 275px;
+  margin-top: 30px;
+  margin-left: -20px;
+  /* height: 450px; */
+  /* margin-top: 60px;
+  margin-left: 10%; */
+  /* top: 0;
+  left: 0;
+  z-index: 2; */
+}
+
+.white-box {
+  position: absolute;
+  /* top: 133%;
+    left: 10.91%; */
+  top: 10px;
+  left: 0;
+  width: 430px;
+  height: 430px;
+  background: white;
+}
+
+.text-spot {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 30px;
+  /* margin-bottom: 10px; */
+}
+
+/* .spot-list {
+    display: flex;
+    flex-direction: column;
+  } */
+
+.spot-title {
+  width: 280px;
+  border: solid 7px #c2836c;
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  /* padding-top: 70px; */
+  height: 90%;
+}
+
+.item-title {
+  width: 280px;
+  border: solid 7px #eee3d0;
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  /* padding-top: 70px; */
+  height: 90%;
+}
+
+.spot-title-main {
+  /* position: absolute;
+    top: 70px;
+    left: 40px; */
+  text-align: center;
+  font-size: 18px;
+  margin-left: 10px;
+  line-height: 1.2;
+}
+
+.spot-title-sub {
+  /* position: absolute;
+    top: 180px;
+    left: 30px; */
+  margin-top: 15px;
+  font-size: 6px;
+  margin-left: 10px;
+  /* margin-left: 50px; */
+}
+
+/* .spot-reverse .photo-box {
+  left: 45px;
+} */
+
+.item {
+  background-color: #c2836c;
+  /* height: 660px; */
+  width: 100%;
+  margin-top: 30px;
+  padding-bottom: 40px;
+}
+
+.spot-item {
+  margin-bottom: 0;
+}
+
+.text-item {
+  color: #eee3d0;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 35px;
+}
+
+.item-title-sub {
+  /* background-color: white; */
+  font-size: 15px;
+  line-height: 2;
+  padding-left: 25px;
+  /* padding-top: 30px; */
+  padding-right: 10px;
+  /* height: 80%; */
+}
+
+.item-photo-box {
+  position: absolute;
+  border: solid 10px #eee3d0;
+  width: 860px;
+  height: 450px;
+  /* margin-top: 60px;
+    margin-left: 10%; */
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.country-icon-wrap {
+  text-align: center;
+  margin-top: 70px;
+  width: 200px;
+  background-color: #12223c;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.country-icon-wrap a {
+  font-size: 14px;
+  color: #eee3d0;
+}
+
+.country-icon-wrap img {
+  width: 20px;
+  padding-right: 10px;
+}
+
+.hotel-myanmar {
+  position: relative;
+  display: flex;
+  /* margin-top: 70px; */
+  width: 100%;
+  /* justify-content: space-around; */
+}
+
+.hotel-wrap {
+  margin-top: 80px;
+}
+
+.hotel-img-wrap {
+  /* position: absolute; */
+  /* width: 345px; */
+  height: 345px;
+  margin-left: 62px;
+}
+
+.hotel-img-wrap img {
+  /* position: absolute; */
+  /* top: 50px;
+    left: 10%; */
+  width: 98%;
+  height: 92%;
+  margin-top: -50px;
+  object-fit: cover;
+  /* height: 45vh; */
+  z-index: 20;
+}
+
+.hotel-myanmar-box-white {
+  position: absolute;
+  z-index: -15;
+  width: 85vw;
+  height: 350px;
+  top: 14px;
+  right: 0;
+  background-color: white;
+}
+
+.hotel-myanmar-box-pink {
+  position: absolute;
+  z-index: -10;
+  width: 85vw;
+  height: 350px;
+  top: 30px;
+  left: 0;
+  background-color: #c2836c;
+}
+
+.hotel-title-wrap {
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+.hotel-title-name {
+  /* position: absolute; */
+  font-size: 20px;
+  /* top: 400px;
+    left: 12%; */
+  z-index: 40;
+}
+
+.hotel-title-add {
+  /* position: absolute; */
+  font-size: 10px;
+  z-index: 40;
+  /* top: 450px;
+    left: 12%; */
+}
+
+.hotel-ex {
+  font-size: 13px;
+  /* top: 530px;
+    left: 12%; */
+  z-index: 40;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+/* 困ったらページ */
+.help {
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+}
+.help-left {
+  position: relative;
+  width: 50%;
+}
+.help-img-wrap {
+  width: 37vw;
+  height: 40vw;
+  max-height: 550px;
+  margin-left: 15%;
+  position: absolute;
+  bottom: 50px;
+  /* width: 600px;
+    height: auto;
+    margin-left: 10%;
+    position: relative;
+    top: 50px; */
+}
+.help-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+  z-index: 20;
+}
+
+.help-left-box {
+  background-color: #c2836c;
+  width: 37vw;
+  height: 40vw;
+  max-height: 550px;
+  /* width: 80%;
+    height: 70vh; */
+  z-index: -10;
+  position: absolute;
+  bottom: 0;
+}
+.help-right {
+  position: relative;
+  width: 50%;
+}
+
+.help-right-box {
+  border: solid 4px #c2836c;
+  position: absolute;
+  max-height: 550px;
+  bottom: 50px;
+  left: 10%;
+  width: 35vw;
+  padding: 10px 7%;
+}
+
+.help-title {
+  background-color: #dabfa7;
+  padding: 5px 20px;
+  font-size: 40px;
+  display: inline-block;
+}
+
+.ode {
+  /* margin-top: ; */
+  left: 32%;
+  /* position: absolute; */
+  font-size: 25px;
+  margin-bottom: 1.5vw;
+  text-align: center;
+}
+
+.ode-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ode-country {
+  font-size: 1.2vw;
+  text-align: center;
+  list-style: none;
+  margin-bottom: 1.5vw;
+}
+
+/* foolproofとはページ */
+.foolproof {
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+}
+.foolproof-img-wrap {
+  width: 80%;
+  height: 70vh;
+  position: relative;
+  margin: 3% auto;
+  /* margin-left: 12%;
+    margin-top: 3%; */
+  z-index: 1;
+}
+
+.foolproof-img-wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+.foolproof-box-white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.7;
+  z-index: 10;
+}
+
+.foolproof-box-pink {
+  width: 45vh;
+  height: 45vh;
+  margin-top: 1%;
+  margin-left: 9%;
+  background-color: #c2836c;
+  position: absolute;
+  z-index: 10;
+}
+
+.foolproof-title {
+  position: absolute;
+  z-index: 20;
+  margin-top: 7%;
+  margin-left: 10%;
+  font-size: 4.3vh;
+}
+
+.foolproof-title p {
+  position: absolute;
+  z-index: 20;
+  margin-top: 5%;
+  margin-left: 75%;
+  font-size: 4vh;
+}
+
+.foolproof-ex {
+  position: absolute;
+  z-index: 30;
+  bottom: 11%;
+  left: 57%;
+}
+
+.foolproof-ex1 {
+  font-size: 4vw;
+}
+
+.foolproof-ex2 p {
+  font-size: 1.5vw;
+  line-height: 2.6vw;
+}
+
+.footer {
+  background-color: #12223c;
+  height: 200px;
+}
+
+.footer p {
+  font-size: 15px;
+  color: #eee3d0;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.header-sp-icon-wrap {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+}
+
+.header-sp-icon-bar1,
+.header-sp-icon-bar2,
+.header-sp-icon-bar3 {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #231300;
+  border-radius: 1px;
+  transform-origin: left;
+  transition: all 0.3s ease-out;
+}
+
+.is-open .header-sp-icon-bar1 {
+  transform: rotate(45deg);
+}
+
+.is-open .header-sp-icon-bar2 {
+  transform: scale(0);
+}
+
+.is-open .header-sp-icon-bar3 {
+  transform: rotate(-45deg);
+}
+
+.header-sp-nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display: none;
+  padding-top: 200px;
+}
+
+.header-sp-nav-list {
+  width: 60%;
+  margin: auto;
+  list-style: none;
+}
+
+.header-sp-nav-img-wrap {
+  width: 100px;
+  margin: 15vh auto 10vh;
+}
+
+.header-sp-nav-img-wrap img {
+  width: 100%;
+}
+
+.header-sp-nav-list li {
+  margin-bottom: 60px;
+}
+
+.header-sp-nav-list a {
+  font-size: 20px;
+  color: #231300;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-sp-nav-list img {
+  width: 7%;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    width: 100vh;
+    height: 60px;
+  }
+  .header-nav-list {
+    display: none;
+  }
+
+  .main-visual-image-wrap1 {
+    width: 100vw;
+    float: none;
+    margin: 0;
+  }
+
+  .main-visual-image-wrap1 img {
+    width: 100vw;
+    height: auto;
+  }
+}
