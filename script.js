@@ -12,7 +12,7 @@ $(function () {
   });
 
   if (window.innerWidth < 480) {
-    document.getElementById("go-myanmar").href = "sp-myanmar.html";
+    document.getElementById("go-myanmar").href = "https://r-nakamura04.github.io/Foolproof/sp-myanmar.html";
     document.getElementById("go-indonesia").href = "sp-indonesia.html";
     document.getElementById("go-philippine").href = "sp-philippine.html";
     document.getElementById("go-singapore").href = "sp-singapore.html";
